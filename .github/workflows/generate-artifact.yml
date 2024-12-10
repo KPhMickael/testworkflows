@@ -24,7 +24,7 @@ jobs:
       # Étape 3 : Convertir le fichier Markdown en PDF avec WeasyPrint
       - name: Generate PDF from Markdown using WeasyPrint
         run: |
-          pandoc README.md -o README.pdf --pdf-engine=weasyprint
+          pandoc docs/document.md -o document.pdf --pdf-engine=weasyprint
 
       # Étape 4 : Télécharger le PDF généré comme artefact
       - name: Upload PDF as artifact
