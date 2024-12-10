@@ -1,25 +1,13 @@
-# Générer un PDF avec GitHub Actions
+Générer un PDF à partir d'un fichier Markdown
+Ce projet fournit une méthode simple pour convertir un fichier Markdown, comme README.md, en un fichier PDF. Pour cela, nous utilisons Pandoc et WeasyPrint.
 
-Ce document explique comment utiliser GitHub Actions pour automatiser la génération d'un fichier PDF à partir d'un fichier Markdown, en utilisant **Pandoc** et **LaTeX**. Le workflow GitHub Actions convertira un fichier Markdown en PDF et téléchargera le fichier généré en tant qu'artefact.
+Prérequis
+Avant de pouvoir générer le fichier PDF, vous devez installer Pandoc et WeasyPrint. Voici les étapes pour installer les outils nécessaires sur votre machine :
 
----
+1. Installation de Pandoc
+Pandoc est un outil en ligne de commande pour convertir des fichiers entre différents formats. Pour installer Pandoc, suivez les instructions ci-dessous :
 
-## Prérequis
+Sur Ubuntu/Debian :
 
-Avant de pouvoir utiliser ce workflow, voici ce que tu dois avoir :
-
-- **Un dépôt GitHub** : Ce workflow est conçu pour fonctionner dans un dépôt GitHub.
-- **Un fichier Markdown (`.md`)** : Le fichier source que tu souhaites convertir en PDF. Tu peux le créer directement dans ton dépôt ou laisser le workflow créer un fichier de test.
-- **Un moteur LaTeX** : GitHub Actions installera automatiquement LaTeX pendant l'exécution du workflow, donc tu n'as rien à installer localement.
-
----
-
-## Étapes pour utiliser le workflow
-
-1. **Cloner le dépôt**
-
-   Assure-toi d'avoir cloné le dépôt contenant le fichier Markdown que tu veux convertir en PDF. Si tu n'as pas encore de dépôt, crée-en un sur GitHub.
-
-   ```bash
-   git clone https://github.com/ton-utilisateur/ton-depot.git
-   cd ton-depot
+sudo apt-get update
+sudo apt-get install pandoc
